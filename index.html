@@ -78,7 +78,12 @@ main{max-width:1180px;margin:auto;padding:45px 18px}.grid{display:grid;grid-temp
 
 <section id="reviews" style="max-width:1180px;margin:0 auto;padding:10px 18px 45px"><h2>Отзывы покупателей</h2><div class="grid"><div class="card"><h3>«Хороший выбор»</h3><p>Удобно, что характеристики и фотографии собраны в одном месте. Заказ можно оформить через корзину.</p></div><div class="card"><h3>«Понятный каталог»</h3><p>Есть современные блочные и рекурсивные модели, а карточки открываются прямо на сайте.</p></div><div class="card"><h3>«Быстрый заказ»</h3><p>Добавил товар в корзину, указал контакты — дальше заявка уходит продавцу.</p></div></div><p class="small">Отзывы на этой странице являются демонстрационными. Не выдавайте их за реальные отзывы покупателей до получения подтверждённых отзывов.</p></section>
 
-<button class="cart-fab" onclick="openCart()">🛒 Корзина (<span id="fabCount">0</span>)</button>
+<button class="btn cart-btn cart-icon-only"
+        aria-label="Открыть корзину"
+        title="Корзина"
+        onclick="openCart()">
+  🛒 <span class="cart-count" id="cartCount">0</span>
+</button>
 <div class="modal" id="cartModal" onclick="if(event.target===this)closeCart()"><div class="box"><span class="close" onclick="closeCart()">×</span><h2>Корзина</h2><div id="cartList" class="cart-list"></div><div class="total" id="cartTotal">Итого: $0</div><div class="checkout"><input id="orderName" placeholder="Ваше имя" autocomplete="name"><input id="orderPhone" placeholder="Телефон или Telegram" autocomplete="tel"><textarea id="orderComment" placeholder="Комментарий к заказу"></textarea><button class="btn" onclick="submitOrder()">Оформить заказ</button><a class="btn" href="https://t.me/BearDagestanShopBot" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Открыть Telegram-бота</a><div class="success" id="orderSuccess"></div><div class="error" id="orderError"></div><p class="small">Нажимая «Оформить заказ», вы отправляете заявку продавцу. Оплата и окончательное подтверждение заказа согласовываются с продавцом. Перед покупкой проверьте требования законодательства вашей страны к приобретению и использованию луков и принадлежностей.</p></div></div></div>
 <footer>© BEAR • каталог современных луков и аксессуаров</footer>
 <div class="modal" id="modal" onclick="if(event.target===this)closeProduct()"><div class="box"><span class="close" onclick="closeProduct()">×</span><div class="modalphoto" id="mpic"></div><h2 id="mt"></h2><p id="md"></p><p class="source" id="ms"></p><h2 id="mprice"></h2><a class="btn" id="mlink" target="_blank" rel="noopener">Открыть страницу модели</a></div></div>
